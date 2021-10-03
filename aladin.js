@@ -10106,8 +10106,8 @@ View = (function() {
             ctx.strokeStyle = '#c38';
             ctx.arc(12, 12, 8, 0, 2*Math.PI, true);
             ctx.stroke();
-            this.catalogForPopup = A.catalog({shape: c, sourceSize: 24});
-            //this.catalogForPopup = A.catalog({sourceSize: 18, shape: 'circle', color: '#c38'});
+            // this.catalogForPopup = A.catalog({shape: c, sourceSize: 24});
+            this.catalogForPopup = A.catalog({sourceSize: 18, shape: 'circle', color: '#c38'});
             this.catalogForPopup.hide();
             this.catalogForPopup.setView(this);
             // overlays (footprints for instance)
