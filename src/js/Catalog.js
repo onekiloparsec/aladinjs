@@ -64,7 +64,7 @@ cds.Catalog = (function() {
             this.sourceSize = this.shape.width;
         }
         this._shapeIsFunction = false; // if true, the shape is a function drawing on the canvas
-        if ($.isFunction(this.shape)) {
+        if (Utils.isFunction(this.shape)) {
             this._shapeIsFunction = true;
         }
         
