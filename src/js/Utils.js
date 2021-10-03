@@ -112,7 +112,7 @@ if (!Function.prototype.bind) {
 $ = $ || jQuery
 
 /* source : http://stackoverflow.com/a/8764051 */
-$.urlParam = function (name, queryString) {
+Utils.urlParam = function (name, queryString) {
   if (queryString === undefined) {
     queryString = location.search
   }

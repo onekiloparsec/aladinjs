@@ -4396,7 +4396,7 @@ if (!Function.prototype.bind) {
 $ = $ || jQuery;
 
 /* source : http://stackoverflow.com/a/8764051 */
-$.urlParam = function(name, queryString){
+Utils.urlParam = function(name, queryString){
     if (queryString===undefined) {
         queryString = location.search;
     }
@@ -12416,34 +12416,34 @@ Aladin = (function() {
     
     Aladin.prototype.getOptionsFromQueryString = function() {
         var options = {};
-        var requestedTarget = $.urlParam('target');
+        var requestedTarget = Utils.urlParam('target');
         if (requestedTarget) {
             options.target = requestedTarget;
         }
-        var requestedFrame = $.urlParam('frame');
+        var requestedFrame = Utils.urlParam('frame');
         if (requestedFrame && CooFrameEnum[requestedFrame] ) {
             options.frame = requestedFrame;
         }
-        var requestedSurveyId = $.urlParam('survey');
+        var requestedSurveyId = Utils.urlParam('survey');
         if (requestedSurveyId && HpxImageSurvey.getSurveyInfoFromId(requestedSurveyId)) {
             options.survey = requestedSurveyId;
         }
-        var requestedZoom = $.urlParam('zoom');
+        var requestedZoom = Utils.urlParam('zoom');
         if (requestedZoom && requestedZoom>0 && requestedZoom<180) {
             options.zoom = requestedZoom;
         }
         
-        var requestedShowreticle = $.urlParam('showReticle');
+        var requestedShowreticle = Utils.urlParam('showReticle');
         if (requestedShowreticle) {
             options.showReticle = requestedShowreticle.toLowerCase()=='true';
         }
         
-        var requestedCooFrame =  $.urlParam('cooFrame');
+        var requestedCooFrame =  Utils.urlParam('cooFrame');
         if (requestedCooFrame) {
             options.cooFrame = requestedCooFrame;
         }
         
-        var requestedFullscreen =  $.urlParam('fullScreen');
+        var requestedFullscreen =  Utils.urlParam('fullScreen');
         if (requestedFullscreen !== undefined) {
             options.fullScreen = requestedFullscreen;
         }
