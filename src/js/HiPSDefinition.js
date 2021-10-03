@@ -483,7 +483,7 @@ HiPSDefinition = (function() {
         // split on LF
         var lines = propertiesStr.split('\n');
         for (var k=0; k<lines.length; k++)  {
-            var l = $.trim(lines[k]);
+            var l = lines[k].trim();
             // ignore comments lines
             if (l.slice(0, 1)==='#') {
                 continue;
@@ -492,8 +492,8 @@ HiPSDefinition = (function() {
             if (idx<0) {
                 continue;
             }
-            var key = $.trim(l.slice(0, idx));
-            var value = $.trim(l.slice(idx+1));
+            var key = l.slice(0, idx).trim();
+            var value = l.slice(idx+1).trim();
 
             propertiesDict[key] = value;
         }

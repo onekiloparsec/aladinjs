@@ -199,7 +199,7 @@ cds.Catalog = (function() {
                 var field = fields[l];
                 if ( ! raFieldIdx) {
                     if (field.ucd) {
-                        var ucd = $.trim(field.ucd.toLowerCase());
+                        var ucd = field.ucd.toLowerCase().trim();
                         if (ucd.indexOf('pos.eq.ra')==0 || ucd.indexOf('pos_eq_ra')==0) {
                             raFieldIdx = l;
                             continue;
@@ -209,7 +209,7 @@ cds.Catalog = (function() {
                     
                 if ( ! decFieldIdx) {
                     if (field.ucd) {
-                        var ucd = $.trim(field.ucd.toLowerCase());
+                        var ucd = field.ucd.toLowerCase().trim();
                         if (ucd.indexOf('pos.eq.dec')==0 || ucd.indexOf('pos_eq_dec')==0) {
                             decFieldIdx = l;
                             continue;

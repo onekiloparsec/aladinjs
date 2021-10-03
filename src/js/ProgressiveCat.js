@@ -96,8 +96,8 @@ ProgressiveCat = (function() {
                 for (var k=0; k<lines.length; k++) {
                     var line = lines[k];
                     var idx = line.indexOf('=');
-                    var propName  = $.trim(line.substring(0, idx));
-                    var propValue = $.trim(line.substring(idx + 1));
+                    var propName  = line.substring(0, idx).trim();
+                    var propValue = line.substring(idx + 1).trim();
                     
                     props[propName] = propValue;
                 }
