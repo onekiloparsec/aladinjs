@@ -7321,7 +7321,7 @@ cds.Catalog = (function() {
             
             var fields = [];
             var k = 0;
-            var $xml = $($.parseXML(xml));
+            var $xml = $(Utils.parseXML(xml));
             var prefix = getPrefix($xml);
             $xml.find(prefix + "FIELD").each(function() {
                 var f = {};
